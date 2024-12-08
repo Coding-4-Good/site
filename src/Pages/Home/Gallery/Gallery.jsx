@@ -55,21 +55,7 @@ export default function Gallery() {
             }
         );
 
-        // Video scroll animation
-        gsap.fromTo(".videos",
-            { x: "0" },
-            {
-                x: "-=100%",
-                ease: "none",
-                duration: 10000,
-                scrollTrigger: {
-                    trigger: ".main-video-gallery",
-                    start: "top-=100 top",
-                    pin: true,
-                    scrub: true,
-                },
-            }
-        );
+
     }, [])
 
     // Handler for video hover
@@ -123,30 +109,7 @@ export default function Gallery() {
 
             </div>
 
-            {/* Video Gallery Section */}
-            <div className="main-video-gallery">
-                <div className="uaisx">
-                    <h1>VIDEOS</h1>
-                </div>
-                <div className="videos">
-                    {[video1, video2].map((videoSrc, index) => (
-                        <div
-                            key={index}
-                            className="video-container"
-                            onMouseEnter={() => handleVideoHover(index, true)}
-                            onMouseLeave={() => handleVideoHover(index, false)}
-                        >
-                            <video
-                                ref={el => videoRefs.current[index] = el}
-                                src={videoSrc}
-                                muted
-                                playsInline
-                                className="gallery-video"
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
+
         </>
     )
 }
