@@ -51,7 +51,6 @@ import video2 from "../../../assets/Kids/Video2.mp4"
 import video3 from "../../../assets/Kids/Video3.mp4"
 import video4 from "../../../assets/Kids/Video4.mp4"
 import video5 from "../../../assets/Kids/Video5.mp4"
-import video6 from "../../../assets/Kids/Video6.mp4"
 import video7 from "../../../assets/Kids/Video7.mp4"
 // Add more video imports as needed
 
@@ -238,7 +237,7 @@ export default function Gallery() {
                     </div>
 
                     <div className="videos">
-                        {[video1, video2, video3, video4, video5, video6, video7].map((videoSrc, index) => (
+                        {[video1, video2, video3, video4, video5, video7].map((videoSrc, index) => (
                             <div
                                 key={index}
                                 className="video"

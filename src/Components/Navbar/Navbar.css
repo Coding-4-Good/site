@@ -56,7 +56,7 @@
     position: fixed;
     background-color: white;
     max-width: 1600px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 999999;
@@ -123,6 +123,9 @@
     }
 
     .menuBtn{
+        display: flex;
+    }
+    .hamMenu{
         display: flex;
     }
 }

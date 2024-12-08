@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ReactLenis from "lenis/react";
 import './Navbar.css'
 import logo from "../../assets/logo.png"
-import { Link } from "react-router-dom";
 import ButtonSmall from "../Buttons/ButtonSmall/Button";
 import ButtonFull from "../Buttons/ButtonFull/ButtonFull";
 import arrowRight from "../../assets/arrow-right.svg"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export default function Home() {
-
+export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
 
-    function handleClick() {
+    function handleClick(e) {
+        // Stop event propagation to prevent nested click events
+        e.stopPropagation();
+
         setMenuOpen(!menuOpen)
 
         if (!menuOpen) {
@@ -38,28 +38,54 @@ export default function Home() {
         }
     }
 
+    const scrollToSection = (sectionRef, e) => {
+        // Prevent any potential event propagation
+        e.stopPropagation();
+
+        // Close mobile menu
+        setMenuOpen(false);
+        gsap.fromTo(".hamMenu", {
+            top: "0px"
+        }, {
+            top: "-800px",
+            ease: "power3.inOut",
+            duration: 0.8
+        });
+
+        // Scroll to section using scrollIntoView
+        if (sectionRef === 'home') {
+            // Scroll to top of the page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            const section = document.querySelector(sectionRef);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }
+
     return (
         <div className="main-navbar">
             <div className="hamMenu">
                 <div className="items">
-                    <div className="item">
+                    <div className="item" onClick={(e) => scrollToSection('home', e)}>
                         <span>Home</span>
                         <img style={{ height: '30px' }} src={arrowRight} alt="" />
                     </div>
-                    <div className="item">
+                    <div className="item" onClick={(e) => scrollToSection('.main-second-section', e)}>
                         <span>About</span>
                         <img style={{ height: '30px' }} src={arrowRight} alt="" />
                     </div>
-                    <div className="item">
+                    <div className="item" onClick={(e) => scrollToSection('.main-fourth-section', e)}>
                         <span>Team</span>
                         <img style={{ height: '30px' }} src={arrowRight} alt="" />
                     </div>
-                    <div className="item">
+                    <div className="item" onClick={(e) => scrollToSection('.main-gallery', e)}>
                         <span>Gallery</span>
                         <img style={{ height: '30px' }} src={arrowRight} alt="" />
                     </div>
                     <div className="item">
-                        <ButtonFull text={"Donate"}></ButtonFull>
+                        <ButtonFull onClick={() => { window.location.replace("https://donate.coding4good.in") }} text={"Donate"}></ButtonFull>
                     </div>
                 </div>
             </div>
@@ -68,13 +94,13 @@ export default function Home() {
                     <img style={{ height: "30px" }} src={logo} alt="" />
                 </div>
                 <div className="navigation">
-                    <span>Home</span>
-                    <span>About</span>
-                    <span>Team</span>
-                    <span>Gallery</span>
+                    <span onClick={(e) => scrollToSection('home', e)}>Home</span>
+                    <span onClick={(e) => scrollToSection('.main-second-section', e)}>About</span>
+                    <span onClick={(e) => scrollToSection('.main-fourth-section', e)}>Team</span>
+                    <span onClick={(e) => scrollToSection('.main-gallery', e)}>Gallery</span>
                 </div>
                 <div className="right">
-                    <ButtonSmall text={"Donate"}></ButtonSmall>
+                    <ButtonSmall onClick={() => { window.location.replace("https://donate.coding4good.in") }} text={"Donate"}></ButtonSmall>
                     <div onClick={handleClick} className="menuBtn">
                         <div className={menuOpen ? "line1-rxc active" : "line1-rxc"}></div>
                         <div className={menuOpen ? "line2-rxy active" : "line2-rxy"}></div>

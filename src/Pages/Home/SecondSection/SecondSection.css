@@ -57,10 +57,12 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 4px;
+    width: 100%;
 }
 
 .asdas span{
     position: relative;
+    font-family: "Satoshi";
 }
 
 @media (max-width: 1356px) {

@@ -23,6 +23,7 @@ export default function Home() {
                 <ThirdSection></ThirdSection>
                 <FourthSection></FourthSection>
                 <Gallery></Gallery>
+                <Footer></Footer>
             </div>
         </ReactLenis >
     )

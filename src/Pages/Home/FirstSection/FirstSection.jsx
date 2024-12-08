@@ -109,7 +109,7 @@ export default function FirstSection() {
                             </div>
                         </div>
                         <div className="ecoad">
-                            <ButtonLarge text={"Donate"}></ButtonLarge>
+                            <ButtonLarge onClick={() => { window.location.replace("https://donate.coding4good.in") }} text={"Donate"}></ButtonLarge>
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 import './ButtonFull.css'
 
 
-export default function ButtonFull({ text }) {
+export default function ButtonFull({ text, onClick }) {
 
     return (
-        <button className="btn-fl">{text}</button>
+        <button onClick={onClick} className="btn-fl">{text}</button>
     )
 }
 

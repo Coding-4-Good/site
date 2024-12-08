@@ -129,7 +129,7 @@ export default function Home() {
                             <div style={{ overflow: "hidden" }}><span>technology.</span></div>
                         </div>
                         <div className="rad">
-                            <ButtonLarge text={"Donate"}></ButtonLarge>
+                            <ButtonLarge onClick={() => { window.location.replace("https://donate.coding4good.in") }} text={"Donate"}></ButtonLarge>
                         </div>
                     </div>
 
