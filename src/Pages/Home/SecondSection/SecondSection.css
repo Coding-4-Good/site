@@ -1,0 +1,101 @@
+.main-second-section{
+    width: 100%;
+    height: 100%;
+    background-color: #113b11;
+    z-index: 100;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    z-index: 40;
+    overflow: hidden;
+    border-top-left-radius: 43px;
+    border-top-right-radius: 43px;
+}
+
+
+.div1{
+    position: relative!important;
+    height: 100%;
+    width: 100%;
+}
+
+.secondSection{
+    width: 85%;
+    height: 100%;
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+}
+
+.radcx{
+    height: 100%;
+    width: 1000px;
+    font-family: "Satoshi";
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.radcx h1{
+    font-size: 49px;
+}
+
+.asdasx{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.asdasx h1{
+    position: relative;
+}
+.asdas{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.asdas span{
+    position: relative;
+}
+
+@media (max-width: 1356px) {
+    .secondSection{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    .imageKid{
+        width: 100%;
+    }
+
+    .radcx{
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .asdasx h1{
+        font-size: 25px;
+    }
+
+    .asdasx{
+        gap: 5px;
+    }
+
+    .asdas span{
+        font-size: 13px;;
+    }
+
+    .asdas{
+        gap: 2px;
+    }
+}

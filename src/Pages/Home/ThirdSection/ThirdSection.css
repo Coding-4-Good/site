@@ -1,0 +1,100 @@
+.main-third-section{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 40;
+
+}
+
+.raxis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.raxis h1{
+    font-family: "Blackbird";
+    font-size: 65px;
+    position: relative;
+    color: black;
+}
+
+.main-asdx{
+    width: 85%;
+    height: 100%;
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle at 60% 420px, #113B11, #47B749);
+    border-radius: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: "Satoshi";
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: relative;
+}
+
+.card h1{
+    font-size: 54px;
+}
+
+.card span{
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+}
+
+
+@media (max-width: 1488px) {
+    .main-third-section{
+        top: 150px;
+    }
+}
+
+@media (max-width: 738px) {
+    .main-third-section{
+        top: 500px;
+    }
+}
+
+@media (max-width: 906px) {
+    .raxis h1{
+        font-size: 43px;
+    }
+}
+
+
+@media (max-width: 1498px) {
+    .main-third-section{
+        margin-bottom: 300px;
+    }
+}
+
+@media (max-width: 742px) {
+    .main-third-section{
+        margin-bottom: 1000px;
+    }
+}

@@ -1,0 +1,112 @@
+.main-fourth-section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 40;
+    background-color: white;
+}
+
+.fourthSection{
+    width: 85%;
+    height: 100%;
+}
+
+.aixms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.aixms h1{
+    font-size: 58px;
+    font-family: "Blackbird";
+    position: relative;
+}
+
+.teamCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.boxBottom{
+    width: 300px;
+    height: 200px;
+    background: radial-gradient(circle at 60% 420px, #113B11, #47B749);
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+#namePerson{
+    font-size: 26px;
+    font-family: "Satoshi";
+}
+
+.text{
+    height: 170px;
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cardTeam{
+    margin-top: 300px;
+    position: relative;
+}
+
+.img{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+    object-fit: cover;
+}
+
+.img img{
+    width: 250px;
+    height: 222px;
+    border-radius: 23px;
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+}
+
+#role{
+    font-size: 16px;
+    font-family: "Satoshi";
+}
+
+#purvang{
+    height: 220px;
+}
+
+
+@media (max-width: 875px) {
+    .aixms h1{
+        font-size: 40px;
+    }
+}
+
+
+
+@media (max-width: 774px) {
+    .main-fourth-section{
+        height: calc(100% + 450px);
+    }
+}

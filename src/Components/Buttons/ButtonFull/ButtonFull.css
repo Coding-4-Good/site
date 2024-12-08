@@ -1,0 +1,16 @@
+.btn-fl{
+    height: 60px;
+    width: 100%;
+    display: inline;
+    border-radius: 40px;
+    border: 1px solid white;
+    background-color: #4AC337;
+    color:  white;
+    font-family: "Satoshi";
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.btn-fl:hover{
+    background-color: #2C812C;
+}

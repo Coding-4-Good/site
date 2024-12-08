@@ -1,0 +1,15 @@
+.btn{
+    height: 30px;
+    padding: 0px 13px;
+    display: inline;
+    border-radius: 40px;
+    border: 1px solid white;
+    background-color: #4AC337;
+    color:  white;
+    font-family: "Satoshi";
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #2C812C;
+}
