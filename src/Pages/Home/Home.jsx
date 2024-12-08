@@ -9,6 +9,7 @@ import SecondSection from "./SecondSection/SecondSection";
 import ThirdSection from "./ThirdSection/ThirdSection";
 import FourthSection from "./FourthSection/FourthSection";
 import Gallery from "./Gallery/Gallery";
+import Footer from "../../Components/Footer/Footer"
 
 gsap.registerPlugin(ScrollTrigger)
 

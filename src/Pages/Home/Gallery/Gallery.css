@@ -1,4 +1,4 @@
-.div4{
+.div4 {
     position: relative;
     height: 100%;
     width: 100%;
@@ -7,9 +7,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    z-index: 41;
 }
 
-.main-gallery{
+.main-gallery {
     width: 100%;
     position: relative;
     display: flex;
@@ -19,20 +20,32 @@
     align-items: center;
     overflow-y: hidden;
     height: 900vh;
+    z-index: 41;
 }
 
+.main-videos-section {
+    width: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    height: 100vh;
+    z-index: 41;
+}
 
-.adsas h1{
+.adsas h1 {
     font-family: "Blackbird";
     font-size: 160px;
 }
 
-.uaisx h1{
+.uaisx h1 {
     font-family: "Blackbird";
     font-size: 160px;
 }
 
-.images{
+.images {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -40,13 +53,19 @@
     left: 80%;
 }
 
+.videos {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 550px;
+    left: 80%;
+}
 
-.asoasx{
+.asoasx {
     width: 100%;
     height: 100%;
     top: 100px;
 }
-
 
 .images img {
     width: 400px;
@@ -55,33 +74,92 @@
     object-fit: cover;
 }
 
-.videos{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    gap: 150px;
-    left: 80%;
-    overflow: hidden;
-
-}
-
-.videos video{
+.video video {
     width: 400px;
     height: 500px;
     border-radius: 10px;
     object-fit: cover;
-}
-    
-.main-video-gallery{
-    height: 200vh;
-    width: 100%;
+    position: absolute;
+    z-index: 60;
 }
 
+.video{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.playButton{
+    z-index: 61;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.playButton img{
+    opacity: 1.1;
+}
+
+.aixms1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 50px;
+}
+
+.aixms1 h1 {
+    font-size: 95px;
+    font-family: "Blackbird";
+    position: relative;
+}
+
+
+
 @media (max-width: 718px) {
-    .adsas h1{
-        font-size: 100px;
+    .adsas h1 {
+        font-size: 80px;
     }
-    .uaisx h1{
-        font-size: 100px;
+    .uaisx h1 {
+        font-size: 80px;
+    }
+}
+
+@media (max-height: 801px) {
+    .images img{
+        height: 300px;
+        width: 300px;
+    }
+
+    .video video{
+        height: 350px;
+        width: 300px;
+    }
+
+    .main-second-section{
+        height: 150vh;
+    }
+
+    .main-third-section{
+        margin-top: 350px;
+    }
+
+    .main-fourth-section{
+        margin-top: 200px;
+    }
+
+    .div4{
+        margin-top: 200px;
     }
 }
