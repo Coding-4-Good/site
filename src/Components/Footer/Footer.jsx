@@ -5,6 +5,7 @@ import './Footer.css'
 import logo from "../../assets/logo.png"
 import Button from "../../Components/Buttons/ButtonLarge/ButtonLarge"
 import MohitTiwari from "../../assets/MohitTiwari.jpg"
+import ImerxnLogo from "../../assets/imerxnLogo.png"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -24,6 +25,10 @@ export default function Home() {
                         </div>
 
                         <div className="mainSmallText">
+                            <div className="supportedByImerxn">
+                                <h1>Supported by </h1>
+                                <img height={30} src={ImerxnLogo} alt="" />
+                            </div>
                             <div className="asdas">
                                 <div style={{ overflow: "hidden" }}><span>At</span></div>
                                 <div style={{ overflow: "hidden" }}><span>Coding4Good,</span></div>

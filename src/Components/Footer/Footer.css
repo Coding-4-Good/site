@@ -168,6 +168,15 @@ form textarea{
     left: 100%;
 }
 
+.supportedByImerxn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    font-family: "Satoshi";
+    margin-bottom: 30px;
+}
+
 
 @media (max-width: 1158px) {
     .idkl{
@@ -195,6 +204,9 @@ form textarea{
     .footer{
         height: 130vh;
     }
+
+
+    
 }
 
 @media (max-width: 640px) {
@@ -205,5 +217,9 @@ form textarea{
     .siteByMohit img{
         height: 30px;
         width: 30px;
+    }
+
+    .supportedByImerxn h1{
+        font-size: 25px;
     }
 }
