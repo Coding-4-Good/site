@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Footer.css'
@@ -10,6 +10,27 @@ import ImerxnLogo from "../../assets/imerxnLogo.png"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
+
+    useEffect(() => {
+
+
+        gsap.fromTo(
+            ".asdasasd span",
+            { top: "100px" },
+            {
+                top: "0px",
+                ease: "power2",
+                duration: 0.7,
+                stagger: 0.02,
+                scrollTrigger: {
+                    trigger: ".asdasasd span   ",
+                    start: "top bottom", // Adjust start point as needed
+                    end: "top center", // Adjust end point as needed
+                    toggleActions: "play none none none", // Play the animation once
+                },
+            }
+        );
+    })
 
     return (
         <div className="main-footer">
@@ -29,7 +50,7 @@ export default function Home() {
                                 <h1>Supported by </h1>
                                 <img height={30} src={ImerxnLogo} alt="" />
                             </div>
-                            <div className="asdas">
+                            <div className="asdasasd">
                                 <div style={{ overflow: "hidden" }}><span>At</span></div>
                                 <div style={{ overflow: "hidden" }}><span>Coding4Good,</span></div>
                                 <div style={{ overflow: "hidden" }}><span>we</span></div>
@@ -101,7 +122,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                {/* <div className="bottom">
+                <div className="bottom">
                     <div className="bottom-inner">
                         <span>© Coding4Good All rights reserved.</span>
                         <div onClick={() => { window.location.replace("https://mohittiwaridev.xyz") }} className="siteByMohit">
@@ -109,7 +130,7 @@ export default function Home() {
                             <img height={50} src={MohitTiwari} alt="" />
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     )

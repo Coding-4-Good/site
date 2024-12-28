@@ -45,6 +45,12 @@
     cursor: pointer;
 }
 
+.navigation a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
 .right{
     position: relative;
     z-index: 23;

@@ -6,6 +6,7 @@ import logo from "../../assets/logo.png"
 import ButtonSmall from "../Buttons/ButtonSmall/Button";
 import ButtonFull from "../Buttons/ButtonFull/ButtonFull";
 import arrowRight from "../../assets/arrow-right.svg"
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -97,7 +98,7 @@ export default function Navbar() {
                     <span onClick={(e) => scrollToSection('home', e)}>Home</span>
                     <span onClick={(e) => scrollToSection('.main-second-section', e)}>About</span>
                     <span onClick={(e) => scrollToSection('.main-fourth-section', e)}>Team</span>
-                    <span onClick={(e) => scrollToSection('.main-gallery', e)}>Gallery</span>
+                    <Link to="/gallery">Gallery</Link>
                 </div>
                 <div className="right">
                     <ButtonSmall onClick={() => { window.location.replace("https://donate.coding4good.in") }} text={"Donate"}></ButtonSmall>

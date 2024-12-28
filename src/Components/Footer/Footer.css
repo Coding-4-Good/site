@@ -6,6 +6,7 @@
     background-color: #ffffff;
     z-index: 41;
     position: relative;
+    margin-top: 100px;
 }
 
 .footer{
@@ -33,8 +34,17 @@
     align-items: center;
 }
 
-.adsas span{
+.asdasasd{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    width: 100%;
+}
+
+.asdasasd span{
     font-family: "Satoshi";
+    position: relative;
 }
 
 .linemain{

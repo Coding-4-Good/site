@@ -1,4 +1,3 @@
-import React from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ReactLenis from "lenis/react";
@@ -8,7 +7,6 @@ import FirstSection from "./FirstSection/FirstSection";
 import SecondSection from "./SecondSection/SecondSection";
 import ThirdSection from "./ThirdSection/ThirdSection";
 import FourthSection from "./FourthSection/FourthSection";
-import Gallery from "./Gallery/Gallery";
 import Footer from "../../Components/Footer/Footer"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -22,7 +20,6 @@ export default function Home() {
                 <SecondSection></SecondSection>
                 <ThirdSection></ThirdSection>
                 <FourthSection></FourthSection>
-                <Gallery></Gallery>
                 <Footer></Footer>
             </div>
         </ReactLenis >
