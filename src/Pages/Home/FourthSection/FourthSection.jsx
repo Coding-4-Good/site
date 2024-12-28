@@ -69,7 +69,7 @@ export default function FourthSection() {
                         <div className="boxBottom">
                             <div className="text">
                                 <h1 id="namePerson">Purvang Paladiya</h1>
-                                <span id="role">Teaching Assistant</span>
+                                <span id="role">Mentor - Curriculum Delivery</span>
                             </div>
                         </div>
                         <div className="img">
