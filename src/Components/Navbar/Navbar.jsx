@@ -81,8 +81,8 @@ export default function Navbar() {
                         <span>Team</span>
                         <img style={{ height: '30px' }} src={arrowRight} alt="" />
                     </div>
-                    <div className="item" onClick={(e) => scrollToSection('.main-gallery', e)}>
-                        <span>Gallery</span>
+                    <div className="item" >
+                        <Link to={"/gallery"}>Gallery</Link>
                         <img style={{ height: '30px' }} src={arrowRight} alt="" />
                     </div>
                     <div className="item">

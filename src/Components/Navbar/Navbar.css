@@ -94,6 +94,13 @@
     font-family: "Satoshi";
 }
 
+.item a{
+    font-size: 33px;
+    font-family: "Satoshi";
+    text-decoration: none;
+    color: black;
+}
+
 .menuBtn{
     display: none;
     flex-direction: column;

@@ -122,7 +122,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="bottom">
+                {/* <div className="bottom">
                     <div className="bottom-inner">
                         <span>© Coding4Good All rights reserved.</span>
                         <div onClick={() => { window.location.replace("https://mohittiwaridev.xyz") }} className="siteByMohit">
@@ -130,7 +130,7 @@ export default function Home() {
                             <img height={50} src={MohitTiwari} alt="" />
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )
