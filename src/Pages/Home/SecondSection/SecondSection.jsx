@@ -6,8 +6,10 @@ import CardPixelReveal from "../../../Components/ImageReveal/CardPixelReveal";
 import image1 from "../../../assets/Kids/8.jpg"
 import image2 from "../../../assets/Kids/17.jpg"
 import ButtonLarge from "../../../Components/Buttons/ButtonLarge/ButtonLarge"
+import CustomEase from "gsap/CustomEase";
 
 gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(CustomEase)
 
 export default function Home() {
 
@@ -39,7 +41,7 @@ export default function Home() {
                     trigger: ".asdasx h1",
                     start: "top bottom", // Adjust start point as needed
                     end: "top center", // Adjust end point as needed
-                    toggleActions: "play none none none", // Play the animation once
+                    toggleActions: "play none none reverse", // Play the animation once
                 },
             }
         );
@@ -48,14 +50,14 @@ export default function Home() {
             { top: "100px" },
             {
                 top: "0px",
-                ease: "power2",
-                duration: 0.7,
-                stagger: 0.02,
+                ease: CustomEase.create("custom", "M0,0 C0.044,0.133 0.07,0.37 0.121,0.479 0.214,0.682 0.281,0.77 0.384,0.867 0.575,1.047 0.818,1.001 1,1 "),
+                duration: 1.1,
+                stagger: 0.01,
                 scrollTrigger: {
                     trigger: ".asdas span   ",
                     start: "top bottom", // Adjust start point as needed
                     end: "top center", // Adjust end point as needed
-                    toggleActions: "play none none none", // Play the animation once
+                    toggleActions: "play none none reverse", // Play the animation once
                 },
             }
         );

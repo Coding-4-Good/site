@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./Gallery.css";
-import ReactLenis from "lenis/react";
 import ButtonSmall from "../../Components/Buttons/ButtonLarge/ButtonLarge";
 import Footer from "../../Components/Footer/Footer"
 
@@ -56,8 +55,8 @@ import video7 from "../../assets/Kids/Video7.mp4"
 
 const Gallery = () => {
     const navigate = useNavigate();
-    const [imagesText, setImagesText] = useState("Images →");
-    const [videosText, setVideosText] = useState("Videos →");
+    const [imagesText, setImagesText] = useState("Images");
+    const [videosText, setVideosText] = useState("Videos");
     const [playingIndex, setPlayingIndex] = useState(null);
     const videoRefs = useRef([]);
 
@@ -76,16 +75,6 @@ const Gallery = () => {
         window.addEventListener("popstate", handlePopState);
         return () => window.removeEventListener("popstate", handlePopState);
     }, [navigate]);
-
-    useEffect(() => {
-        const updateText = () => {
-            setImagesText(window.innerWidth <= 659 ? "Images ↓" : "Images →");
-            setVideosText(window.innerWidth <= 659 ? "Videos ↓" : "Videos →");
-        };
-        updateText();
-        window.addEventListener("resize", updateText);
-        return () => window.removeEventListener("resize", updateText);
-    }, []);
 
     const handlePlayPause = (index) => {
         videoRefs.current.forEach((video, idx) => {
@@ -119,64 +108,62 @@ const Gallery = () => {
     ];
 
     return (
-        <ReactLenis root>
-            <div className="gallery-page-main">
-                <div className="btnBack">
-                    <ButtonSmall text={"< Back"} onClick={() => navigate("/")}></ButtonSmall>
-                </div>
-                <div className="asjdaf">
-                    <div className="asd">
-                        <h1 id="asid" className="gallery-title">
-                            {Array.from("Gallery").map((letter, index) => (
-                                <span key={index}>{letter}</span>
-                            ))}
-                        </h1>
-                        <span>Scroll down to explore!</span>
-                    </div>
-                </div>
-                <div className="gallery">
-                    <div className="img-saddf">
-                        <h1>{imagesText}</h1>
-                    </div>
-                    {images.map((img, index) => (
-                        <div className="gallery-item" key={index}>
-                            <img src={img} alt={`Image ${index + 1}`} />
-                        </div>
-                    ))}
-                    <div className="img-saddf">
-                        <h1>{videosText}</h1>
-                    </div>
-                    {videos.map((video, index) => (
-                        <div
-                            className="gallery-item video-container"
-                            key={index}
-                            onMouseEnter={(e) => {
-                                const btn = e.currentTarget.querySelector(".play-pause-btn");
-                                if (btn) btn.style.opacity = 1;
-                            }}
-                            onMouseLeave={(e) => {
-                                const btn = e.currentTarget.querySelector(".play-pause-btn");
-                                if (btn) btn.style.opacity = 0;
-                            }}
-                        >
-                            <video
-                                ref={(el) => (videoRefs.current[index] = el)}
-                                src={video}
-                                alt={`Video ${index + 1}`}
-                                loop
-                            />
-                            <button
-                                className="play-pause-btn"
-                                onClick={() => handlePlayPause(index)}
-                            >
-                                {playingIndex === index ? "❚❚" : "▶"}
-                            </button>
-                        </div>
-                    ))}
-                </div>
-                <Footer></Footer>
+        <div className="gallery-page-main">
+            <div className="btnBack">
+                <ButtonSmall text={"< Back"} onClick={() => navigate("/")}></ButtonSmall>
             </div>
-        </ReactLenis>
+            <div className="asjdaf">
+                <div className="asd">
+                    <h1 id="asid" className="gallery-title">
+                        {Array.from("Gallery").map((letter, index) => (
+                            <span key={index}>{letter}</span>
+                        ))}
+                    </h1>
+                    <span>Scroll down to explore!</span>
+                </div>
+            </div>
+            <div className="gallery">
+                <div className="img-saddf">
+                    <h1>{imagesText}</h1>
+                </div>
+                {images.map((img, index) => (
+                    <div className="gallery-item" key={index}>
+                        <img src={img} alt={`Image ${index + 1}`} />
+                    </div>
+                ))}
+                <div className="img-saddf">
+                    <h1>{videosText}</h1>
+                </div>
+                {videos.map((video, index) => (
+                    <div
+                        className="gallery-item video-container"
+                        key={index}
+                        onMouseEnter={(e) => {
+                            const btn = e.currentTarget.querySelector(".play-pause-btn");
+                            if (btn) btn.style.opacity = 1;
+                        }}
+                        onMouseLeave={(e) => {
+                            const btn = e.currentTarget.querySelector(".play-pause-btn");
+                            if (btn) btn.style.opacity = 0;
+                        }}
+                    >
+                        <video
+                            ref={(el) => (videoRefs.current[index] = el)}
+                            src={video}
+                            alt={`Video ${index + 1}`}
+                            loop
+                        />
+                        <button
+                            className="play-pause-btn"
+                            onClick={() => handlePlayPause(index)}
+                        >
+                            {playingIndex === index ? "❚❚" : "▶"}
+                        </button>
+                    </div>
+                ))}
+            </div>
+            <Footer></Footer>
+        </div>
     );
 };
 

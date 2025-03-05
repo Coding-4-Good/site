@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./FirstSection.css"
 import Leaf from "../../../Components/Leaf/Leaf";
 import ButtonLarge from "../../../Components/Buttons/ButtonLarge/ButtonLarge";
+import CustomEase from "gsap/CustomEase";
+
 gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(CustomEase)
 
 export default function FirstSection() {
 
@@ -36,9 +39,9 @@ export default function FirstSection() {
         }, {
             top: "0px",
             transform: "rotate(0deg)",
-            ease: "power2",
+            ease: CustomEase.create("custom", "M0,0 C0.044,0.133 0.07,0.37 0.121,0.479 0.214,0.682 0.337,0.725 0.44,0.822 0.631,1.002 0.818,1.001 1,1 "),
             duration: "1",
-            stagger: "0.05",
+            stagger: "0.1",
             onComplete: () => {
 
                 gsap.fromTo(".ecoad button", {
