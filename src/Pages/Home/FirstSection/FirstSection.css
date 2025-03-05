@@ -1,154 +1,150 @@
-.main-first-section{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    overflow: hidden;
-    cursor: default;
-    z-index: 23;
-    background-color: white;
+.main-first-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  overflow: hidden;
+  cursor: default;
+  z-index: 23;
+  background-color: white;
 }
 
-.div{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 40;
+.div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 40;
 }
 
-.joas{
-    padding: 7px 10px;
-    border: 1px solid #47B749;
-    border-radius: 40px;
-    font-family: "Satoshi";
-    margin-top: -30px;
-    margin-bottom: 30px;
+.joas {
+  padding: 7px 10px;
+  border: 1px solid #47b749;
+  border-radius: 40px;
+  font-family: "Satoshi";
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
-.firstSection{
-    width: 85%;
-    max-width: 1600px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 40;
+.firstSection {
+  width: 85%;
+  max-width: 1600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 40;
 }
 
-.eres{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.eres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.eres h1{
-    font-family: "Blackbird";
-    font-size: 80px;
-    position: relative;
+.eres h1 {
+  font-family: "Blackbird";
+  font-size: 80px;
+  position: relative;
 }
 
 .imgbox {
-    width: 200px;
-    height: 80px;
-    border-radius: 20px;
-    background-color: rgb(0, 0, 0);
-    margin-top: -20px;
-    background-image: url("../../../assets/eyes.png");
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image inside the box */
-    background-size: 115%;
+  width: 200px;
+  height: 80px;
+  border-radius: 20px;
+  background-color: rgb(0, 0, 0);
+  margin-top: -20px;
+  background-image: url("../../../assets/eyes.png");
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image inside the box */
+  background-size: 115%;
 }
 
-.lines{
-    display: flex;
-    gap: 20px;
+.lines {
+  display: flex;
+  gap: 20px;
 }
 
-.line1, .line2{
-    width: 100%;
-    height: 2px;
-    background-color: #47B749;
-    position: relative;
+.line1,
+.line2 {
+  width: 100%;
+  height: 2px;
+  background-color: #47b749;
+  position: relative;
 }
 
-.leaves{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    display: flex;
-    justify-content: space-between;
-    
+.leaves {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
 }
 
-.leaf1{
-    height: 100px;
+.leaf1 {
+  height: 100px;
 }
 
-.leaf1 svg{
-    transform: rotate(-36deg);
-    margin-top: 90px;
-    margin-right: -12px;
+.leaf1 svg {
+  transform: rotate(-36deg);
+  margin-top: 90px;
+  margin-right: -12px;
 }
 
-.leaf2{
-    height: 100px;
+.leaf2 {
+  height: 100px;
 }
 
-.leaf2 svg{
-    transform: rotate(146deg);
-    margin-top: 100px;
-    margin-left: -12px;
+.leaf2 svg {
+  transform: rotate(146deg);
+  margin-top: 100px;
+  margin-left: -12px;
 }
 
-.ecoad{
-    margin-top: 30px;
+.ecoad {
+  margin-top: 30px;
 }
 
 @media (max-width: 1148px) {
-    .leaves{
-        display: none;
-    }
+  .leaves {
+    display: none;
+  }
 }
 
 @media (max-width: 1292px) {
-    .eres h1{
-        font-size: 6.2vw;
-    }
-
-    
+  .eres h1 {
+    font-size: 6.2vw;
+  }
 }
 
 @media (max-width: 1024px) {
-    .imgbox{
-        display: none;
-    }
+  .imgbox {
+    display: none;
+  }
 }
 
 @media (max-width: 804px) {
-    .eres h1{
-        font-size: 5.8vw;
-    }
+  .eres h1 {
+    font-size: 5.8vw;
+  }
 
-    .eres{
-        gap: 7px;
-    }
-    
+  .eres {
+    gap: 7px;
+  }
 }
 
-
 @media (max-width: 877px) {
-    .joas{
-        padding: 4px 7px;
-        font-size: 10px;
-        margin-bottom: 10px;
-    }
+  .joas {
+    padding: 4px 7px;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
 }
