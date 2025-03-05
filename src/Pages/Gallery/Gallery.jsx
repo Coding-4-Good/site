@@ -126,41 +126,45 @@ const Gallery = () => {
                 <div className="img-saddf">
                     <h1>{imagesText}</h1>
                 </div>
-                {images.map((img, index) => (
-                    <div className="gallery-item" key={index}>
-                        <img src={img} alt={`Image ${index + 1}`} />
-                    </div>
-                ))}
+                <div className="images-sa">
+                    {images.map((img, index) => (
+                        <div className="gallery-item" key={index}>
+                            <img src={img} alt={`Image ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
                 <div className="img-saddf">
                     <h1>{videosText}</h1>
                 </div>
-                {videos.map((video, index) => (
-                    <div
-                        className="gallery-item video-container"
-                        key={index}
-                        onMouseEnter={(e) => {
-                            const btn = e.currentTarget.querySelector(".play-pause-btn");
-                            if (btn) btn.style.opacity = 1;
-                        }}
-                        onMouseLeave={(e) => {
-                            const btn = e.currentTarget.querySelector(".play-pause-btn");
-                            if (btn) btn.style.opacity = 0;
-                        }}
-                    >
-                        <video
-                            ref={(el) => (videoRefs.current[index] = el)}
-                            src={video}
-                            alt={`Video ${index + 1}`}
-                            loop
-                        />
-                        <button
-                            className="play-pause-btn"
-                            onClick={() => handlePlayPause(index)}
+                <div className="videos">
+                    {videos.map((video, index) => (
+                        <div
+                            className="gallery-item video-container"
+                            key={index}
+                            onMouseEnter={(e) => {
+                                const btn = e.currentTarget.querySelector(".play-pause-btn");
+                                if (btn) btn.style.opacity = 1;
+                            }}
+                            onMouseLeave={(e) => {
+                                const btn = e.currentTarget.querySelector(".play-pause-btn");
+                                if (btn) btn.style.opacity = 0;
+                            }}
                         >
-                            {playingIndex === index ? "❚❚" : "▶"}
-                        </button>
-                    </div>
-                ))}
+                            <video
+                                ref={(el) => (videoRefs.current[index] = el)}
+                                src={video}
+                                alt={`Video ${index + 1}`}
+                                loop
+                            />
+                            <button
+                                className="play-pause-btn"
+                                onClick={() => handlePlayPause(index)}
+                            >
+                                {playingIndex === index ? "❚❚" : "▶"}
+                            </button>
+                        </div>
+                    ))}
+                </div>
             </div>
             <Footer></Footer>
         </div>
