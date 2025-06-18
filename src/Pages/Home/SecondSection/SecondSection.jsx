@@ -3,13 +3,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './SecondSection.css'
 import CardPixelReveal from "../../../Components/ImageReveal/CardPixelReveal";
-import image1 from "../../../assets/Kids/8.jpg"
-import image2 from "../../../assets/Kids/17.jpg"
 import ButtonLarge from "../../../Components/Buttons/ButtonLarge/ButtonLarge"
 import CustomEase from "gsap/CustomEase";
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(CustomEase)
+
+const image1 = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/d0b2d4135ef4054a4a3bcd9367bcbd785ccaab37_8.jpg";
+const image2 = "https://hc-cdn.hel1.your-objectstorage.com/s/v3/eeeef74e8b834caa3010a7744cc923b3690af175_18.jpg";
 
 export default function Home() {
 
