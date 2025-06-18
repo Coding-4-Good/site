@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './FourthSection.css'
-import arnav from "../../../assets/arnav.png"
+import arnav from "../../../assets/arnav.jpeg"
 import PurvangPaladiya from "../../../assets/PurvangPaladiya.jpg"
 
 gsap.registerPlugin(ScrollTrigger)
