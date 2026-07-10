@@ -12,10 +12,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function ThirdSection() {
     const cardsData = [
-        { icon: pageFilled, number: 5, label: "Curriculums" },
+        { icon: pageFilled, number: 12, label: "Curriculum" },
         { icon: codeIcon, number: 20, label: "Personal Projects" },
-        { icon: userIcon, number: 40, label: "Students" },
-        { icon: refreshIcon, number: 15, label: "Sessions" }
+        { icon: userIcon, number: 300, label: "Session Attendees" },
+        { icon: refreshIcon, number: 18, label: "Sessions" }
     ];
 
     useEffect(() => {
